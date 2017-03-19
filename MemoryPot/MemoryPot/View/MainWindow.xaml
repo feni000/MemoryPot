@@ -1,0 +1,26 @@
+﻿<Window x:Class="MemoryPot.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryPot"
+        mc:Ignorable="d"
+        Title="Memory Pot" Height="550" Width="825">
+    <Grid Width="auto">
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Name="Practice" Header="Practice">
+            </MenuItem>
+            <MenuItem Header="Configuration">
+                <MenuItem Header="Add">
+                </MenuItem>
+                <MenuItem Name="Delete" Header="Delete">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Information">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
+
