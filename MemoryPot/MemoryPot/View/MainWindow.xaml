@@ -8,15 +8,21 @@
         Title="Memory Pot" Height="550" Width="825">
     <Grid Width="auto">
         <Menu Height="20" VerticalAlignment="Top">
-            <MenuItem Name="Practice" Header="Practice">
+            <MenuItem Name="Practice" Header="Trening">
             </MenuItem>
-            <MenuItem Header="Configuration">
-                <MenuItem Header="Add">
+            <MenuItem Header="Konfiguracja">
+                <MenuItem Name="Change" Header="Zmień">
+                    <MenuItem Name="LanguageChange" Header="Język">
+                    </MenuItem>
+                    <MenuItem Name="DatabaseChange" Header="Lokalizację bazy danych">
+                    </MenuItem>
                 </MenuItem>
-                <MenuItem Name="Delete" Header="Delete">
+                <MenuItem Name="Add"  Header="Dodaj">
+                </MenuItem>
+                <MenuItem Name="Delete" Header="Usuń">
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="Help">
+            <MenuItem Header="Pomoc">
                 <MenuItem Header="Information">
                 </MenuItem>
             </MenuItem>

@@ -1,0 +1,48 @@
+CREATE TABLE MemoryPacks(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	MemoryPackName CHAR(50),
+	ModificationDate datetime
+);
+
+CREATE TABLE QuestionPacks(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	MemoryPacksID INTEGER,
+	QuestionsID INTEGER, 
+	FOREIGN KEY (MemoryPacksID) REFERENCES MemoryPacks(ID),
+	FOREIGN KEY (QuestionsID) REFERENCES Questions(ID)
+);
+
+CREATE TABLE Questions(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	Question TEXT, 
+	Answer TEXT, 
+	AddDate datetime,
+	ModificationDate datetime
+);
+
+CREATE TABLE Users(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	UserName TEXT, 
+	UserPasswordHash TEXT,
+	AddDate datetime,
+	ModificationDate datetime
+);
+
+CREATE TABLE UserPacks(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	UserId INTEGER, 
+	MemoryPacksId INTEGER,
+	AddDate datetime,
+	ModificationDate datetime,
+	FOREIGN KEY (UserId) REFERENCES Users(ID),
+	FOREIGN KEY (MemoryPacksId) REFERENCES MemoryPacks(ID)
+);
+
+CREATE TABLE UserPacksStatistics(
+	ID INTEGER PRIMARY KEY AUTOINCREMENT, 
+	UserId INTEGER,
+	Correct INTEGER,
+	Total INTEGER,
+	Date datetime,
+	FOREIGN KEY (UserId) REFERENCES User(ID)
+);
